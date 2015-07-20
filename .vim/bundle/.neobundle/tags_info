@@ -1,0 +1,12 @@
+AnsiEsc.vim
+neobundle.vim
+neomru.vim
+nerdtree
+tcomment_vim
+unite-colorscheme
+unite.vim
+vim-airline
+vim-endwise
+vim-fugitive
+vim-rails
+vim-railscasts-theme
