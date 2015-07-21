@@ -197,8 +197,10 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
 " 起動時にディレクトリならNERDTree、ファイルならファイルにフォーカスをあてる
-autocmd VimEnter * NERDTree
 let g:nerdtree_tabs_smart_startup_focus=1
+
+autocmd VimEnter * NERDTree | wincmd l
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
