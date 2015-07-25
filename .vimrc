@@ -96,9 +96,9 @@ set number
 " 対応する括弧やブレースを表示する
 set showmatch
 " 改行時に前の行のインデントを継続する
-set autoindent
+" set autoindent
 " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-set smartindent
+" set smartindent
 " タブ文字の表示幅
 set tabstop=4
 " Vimが挿入するインデントの幅
