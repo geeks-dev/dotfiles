@@ -8,5 +8,6 @@ unite.vim
 vim-airline
 vim-endwise
 vim-fugitive
+vim-quickrun
 vim-rails
 vim-railscasts-theme
