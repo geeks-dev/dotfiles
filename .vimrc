@@ -58,7 +58,7 @@ NeoBundleCheck
 """"""""""""""""""""""""""""""
 " 各種オプションの設定
 """"""""""""""""""""""""""""""
-" スワップファイルは使わない(ときどき面倒な警告が出るだけで役に立ったことがない)
+" スワップファイルを使わない
 set noswapfile
 " カーソルが何行目の何列目に置かれているかを表示する
 set ruler
@@ -84,8 +84,6 @@ set smartcase
 set hlsearch
 " 暗い背景色に合わせた配色にする
 set background=dark
-" タブ入力を複数の空白入力に置き換える
-set expandtab
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
 " 保存されていないファイルがあるときでも別のファイルを開けるようにする
@@ -98,10 +96,6 @@ set listchars=tab:>\ ,extends:<
 set number
 " 対応する括弧やブレースを表示する
 set showmatch
-" 改行時に前の行のインデントを継続する
-" set autoindent
-" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-" set smartindent
 " タブ文字の表示幅
 set tabstop=4
 " Vimが挿入するインデントの幅
@@ -201,6 +195,8 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let g:nerdtree_tabs_smart_startup_focus=1
 
 autocmd VimEnter * NERDTree | wincmd l
+
+" ファイルを閉じた時にNERDTreeも自動的に閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
