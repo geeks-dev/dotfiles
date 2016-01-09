@@ -1,7 +1,21 @@
+#!/bin/sh
+
+/usr/bin/xmodmap /home/kaz/.Xmodmap
+
+#mouse_name=$(dmesg | grep "magic.*input" | grep -o '[^^]\[.*]' | tr -d " " | tr -d "[" | tr -d "]")
+#mouse_id=$(xinput list --id-only $mouse_name)
+#xinput set-button-map ${mouse_id} 1 2 3 5 4 &
+#/usr/bin/xinput set-button-map 12 1 2 3 5 4 &
+/usr/bin/xset mouse 3 1 &
+
+
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-ibus-daemon -drx
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+ibus-daemon -drx &
+
+/usr/bin/xss-lock -- gnome-screensaver-command --lock &
+/usr/bin/gnome-screensaver &
 
 
